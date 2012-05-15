@@ -51,7 +51,7 @@ $('document').ready(function() {
     var parseddate;
 
     $.ajax({
-        url: 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=travhimself&include_entities=true&exclude_replies=true&include_rts=true&count=3',
+        url: 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=travhimself&include_entities=true&exclude_replies=true&include_rts=true&count=4',
         dataType: "jsonp",
         success: function(data) {
             $.each(data, function(i, n){
@@ -105,7 +105,7 @@ $('document').ready(function() {
     var tumblrhtml;
 
     $.ajax({
-        url: 'http://api.tumblr.com/v2/blog/travhimself.tumblr.com/posts?api_key=oWYm3pASzH4Lj2kQKCZh6z4W4X86IvVzLspQ5KEJKBGLS6JySZ&limit=3&jsonp=gettumblr',
+        url: 'http://api.tumblr.com/v2/blog/travhimself.tumblr.com/posts?api_key=oWYm3pASzH4Lj2kQKCZh6z4W4X86IvVzLspQ5KEJKBGLS6JySZ&limit=5&jsonp=gettumblr',
         dataType: "jsonp",
         success: function(data) {
             // jsonp is weird, so this ajax hit will never actually 'succeed'...
