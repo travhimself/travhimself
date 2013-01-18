@@ -6,7 +6,7 @@ $('document').ready(function() {
         $('nav a').removeClass('on');
         $(this).addClass('on');
         var navdestination = $(this).attr('href');
-        var navoffset = $(navdestination).offset().top - $(this).position().top - 114;
+        var navoffset = $(navdestination).offset().top - 80;
         $('html, body').animate({
             scrollTop: navoffset
         }, 500);
