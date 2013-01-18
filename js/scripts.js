@@ -18,7 +18,7 @@ $('document').ready(function() {
     };
 
     var contenttemplates = {
-        "tweet": "<div class='tweet'><div class='text'>{{ text }}</div>{{ dateandtime }}</div>",
+        "tweet": "<div class='tweet'><div class='text'>{{ text }}</div>{{ dateandtimepermalink }}</div>",
         "posttext": "<div class='post text'><div class='title'>{{ title }}</div><div class='body'>{{ body }}</div>{{ dateandtime }}</div>",
         "postphoto": "<div class='post photo'><a class='image' href='{{ linkurl }}'><img src='{{ imgurl }}' /></a><div class='caption'>{{ caption }}</div><div class='source'><a href='{{ sourceurl }}'>{{ source }}</a></div>{{ dateandtime }}</div>",
         "postquote": "<div class='post quote'><div class='text'>{{ text }}<div class='source'>&#8212; {{ source }}</div></div>{{ dateandtime }}</div>",
@@ -27,6 +27,7 @@ $('document').ready(function() {
         "postaudio": "<div class='post audio'><img src='{{ albumarturl }}' /><div class='player'>{{ player }}</div><div class='meta'>{{ trackname }} by {{ artist }} from <em>{{ album }}</em></div><div class='caption'>{{ caption }}</div>{{ dateandtime }}</div>",
         "postvideo": "<div class='post video'><div class='player'>{{ player }}</div><div class='caption'>{{ caption }}</div>{{ dateandtime }}</div>",
         "dateandtime": "<div class='dateandtime'><span class='month'>{{ month }}/</span><span class='day'>{{ day }}/</span><span class='year'>{{ year }} </span><span class='hour'>{{ hour }}:</span><span class='minute'>{{ minute }}</span><span class='ampm'>{{ ampm }}</span></div>",
+        "dateandtimepermalink": "<div class='dateandtime'><a href='{{ permalink }}'><span class='month'>{{ month }}/</span><span class='day'>{{ day }}/</span><span class='year'>{{ year }} </span><span class='hour'>{{ hour }}:</span><span class='minute'>{{ minute }}</span><span class='ampm'>{{ ampm }}</span></a></div>",
         "empty": "<div class='empty'>{{ empty }}</div>"
     };
 
@@ -43,6 +44,7 @@ $('document').ready(function() {
     // var templatetumblranswer = _.template(contenttemplates.postanswer);
     
     var templatedateandtime = _.template(contenttemplates.dateandtime);
+    var templatedateandtimepermalink = _.template(contenttemplates.dateandtimepermalink);
     var templateempty = _.template(contenttemplates.empty);
 
     // get latest tweets
@@ -81,7 +83,8 @@ $('document').ready(function() {
 
                 twitterhtml = templatetweet({
                     text: ify.clean(n.text),
-                    dateandtime: templatedateandtime({
+                    dateandtimepermalink: templatedateandtimepermalink({
+                        permalink: 'https://twitter.com/' + n.user.screen_name + '/status/' + n.id_str,
                         month: humanmonth,
                         day: parseddate.getDate(),
                         year: parseddate.getFullYear(),
