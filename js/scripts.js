@@ -12,6 +12,42 @@ $('document').ready(function() {
         }, 500);
     });
 
+    var updatenav = function(e) {
+        var navoffsettwitter = $('a#twitter').offset().top - $(window).scrollTop();
+        if (navoffsettwitter <= 80) {
+            $('nav a').removeClass('on');
+            $('nav a.twitter').addClass('on');
+        }
+
+        var navoffsettumblr = $('a#tumblr').offset().top - $(window).scrollTop();
+        if (navoffsettumblr <= 80) {
+            $('nav a').removeClass('on');
+            $('nav a.tumblr').addClass('on');
+        }
+
+        var navoffsetprojects = $('a#projects').offset().top - $(window).scrollTop();
+        if (navoffsetprojects <= 80) {
+            $('nav a').removeClass('on');
+            $('nav a.projects').addClass('on');
+        }
+
+        var navoffsetabout = $('a#about').offset().top - $(window).scrollTop();
+        if (navoffsetabout <= 80) {
+            $('nav a').removeClass('on');
+            $('nav a.about').addClass('on');
+        }
+
+        var navoffsetfindme = $('a#findme').offset().top - $(window).scrollTop();
+        if (navoffsetfindme <= 80) {
+            $('nav a').removeClass('on');
+            $('nav a.findme').addClass('on');
+        }
+    };
+
+    $(window).scroll( function() {
+        updatenav();
+    });
+
     // set up underscore templating to use {{ }}
     _.templateSettings = {
         interpolate : /\{\{(.+?)\}\}/g
