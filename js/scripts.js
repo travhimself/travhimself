@@ -13,11 +13,11 @@ $('document').ready(function() {
     });
 
     var updatenav = function(e) {
-        var navoffsettwitter = $('a#twitter').offset().top - $(window).scrollTop();
-        if (navoffsettwitter <= 80) {
-            $('nav a').removeClass('on');
-            $('nav a.twitter').addClass('on');
-        }
+        // var navoffsettwitter = $('a#twitter').offset().top - $(window).scrollTop();
+        // if (navoffsettwitter <= 80) {
+        //     $('nav a').removeClass('on');
+        //     $('nav a.twitter').addClass('on');
+        // }
 
         var navoffsettumblr = $('a#tumblr').offset().top - $(window).scrollTop();
         if (navoffsettumblr <= 80) {
@@ -84,59 +84,59 @@ $('document').ready(function() {
     var templateempty = _.template(contenttemplates.empty);
 
     // get latest tweets
-    var $twitterdiv = $('.content.twitter');
-    var twitterhtml;
-    var parseddate;
+    // var $twitterdiv = $('.content.twitter');
+    // var twitterhtml;
+    // var parseddate;
 
-    $.ajax({
-        url: 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=travhimself&include_entities=true&exclude_replies=true&include_rts=true&count=4',
-        dataType: "jsonp",
-        success: function(data) {
-            $.each(data, function(i, n){
-                twitcreated = n.created_at;
-                parseddate = new Date(
-                    twitcreated.replace(/^\w+ (\w+) (\d+) ([\d:]+) \+0000 (\d+)$/, "$1 $2 $4 $3 UTC")
-                );
+    // $.ajax({
+    //     url: 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=travhimself&include_entities=true&exclude_replies=true&include_rts=true&count=4',
+    //     dataType: "jsonp",
+    //     success: function(data) {
+    //         $.each(data, function(i, n){
+    //             twitcreated = n.created_at;
+    //             parseddate = new Date(
+    //                 twitcreated.replace(/^\w+ (\w+) (\d+) ([\d:]+) \+0000 (\d+)$/, "$1 $2 $4 $3 UTC")
+    //             );
 
-                var humanmonth = parseddate.getMonth() + 1;
-                var humanhour = parseddate.getHours();
-                var humanminute = parseddate.getMinutes();
-                var meridian = 'am';
+    //             var humanmonth = parseddate.getMonth() + 1;
+    //             var humanhour = parseddate.getHours();
+    //             var humanminute = parseddate.getMinutes();
+    //             var meridian = 'am';
                 
-                if (humanhour >= 12) {
-                    meridian = 'pm';
-                }
+    //             if (humanhour >= 12) {
+    //                 meridian = 'pm';
+    //             }
 
-                if (humanhour > 12) {
-                    humanhour -= 12;
-                } else if (humanhour == 0) {
-                    humanhour = 12;
-                }
+    //             if (humanhour > 12) {
+    //                 humanhour -= 12;
+    //             } else if (humanhour == 0) {
+    //                 humanhour = 12;
+    //             }
                 
-                if (String(humanminute).length == 1) {
-                    humanminute = '0' + humanminute;
-                }
+    //             if (String(humanminute).length == 1) {
+    //                 humanminute = '0' + humanminute;
+    //             }
 
-                twitterhtml = templatetweet({
-                    text: ify.clean(n.text),
-                    dateandtimepermalink: templatedateandtimepermalink({
-                        permalink: 'https://twitter.com/' + n.user.screen_name + '/status/' + n.id_str,
-                        month: humanmonth,
-                        day: parseddate.getDate(),
-                        year: parseddate.getFullYear(),
-                        hour: humanhour,
-                        minute: humanminute,
-                        ampm: meridian
-                    })
-                });
+    //             twitterhtml = templatetweet({
+    //                 text: ify.clean(n.text),
+    //                 dateandtimepermalink: templatedateandtimepermalink({
+    //                     permalink: 'https://twitter.com/' + n.user.screen_name + '/status/' + n.id_str,
+    //                     month: humanmonth,
+    //                     day: parseddate.getDate(),
+    //                     year: parseddate.getFullYear(),
+    //                     hour: humanhour,
+    //                     minute: humanminute,
+    //                     ampm: meridian
+    //                 })
+    //             });
 
-                $twitterdiv.append(twitterhtml);
-            });
-        },
-        error: function(data) {
-            console.log('error grabbing latest tweets.');
-        }
-    });
+    //             $twitterdiv.append(twitterhtml);
+    //         });
+    //     },
+    //     error: function(data) {
+    //         console.log('error grabbing latest tweets.');
+    //     }
+    // });
 
     // get latest tumblr entries
     var $tumblrdiv = $('.content.tumblr');
