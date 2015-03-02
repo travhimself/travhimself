@@ -442,9 +442,6 @@ Styles - Desktop
   }
 }
 @media only screen and (min-width: 1600px) {
-  div#background {
-    background: #f4f4f4 url(../img/bg-xl.jpg) 50% -300px no-repeat;
-  }
   header .inner,
   section .inner,
   footer .inner {
