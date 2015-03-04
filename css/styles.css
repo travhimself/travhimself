@@ -15,7 +15,7 @@ Styles - All Devices
     left: 0;
   }
   div#content {
-    position: absolute;
+    position: relative;
     z-index: 2;
     top: 0;
     right: 0;
@@ -150,7 +150,7 @@ Styles - Mobile
 -----------------------------------*/
 @media only screen and (max-width: 640px) {
   div#background {
-    background: #f4f4f4 url(../img/bg-xs.jpg) 50% -300px no-repeat;
+    background: #000000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
   }
   header {
     height: 300px;
@@ -159,10 +159,6 @@ Styles - Mobile
     right: 10px;
     bottom: 10px;
     font-size: 6px;
-  }
-  section,
-  footer {
-    margin-bottom: 100px;
   }
   section .inner,
   footer .inner {
@@ -174,22 +170,25 @@ Styles - Mobile
   footer:last-child {
     margin-bottom: 0;
   }
+  div.gap {
+    height: 100px;
+  }
   h1 {
-    width: 220px;
+    width: 200px;
     font-size: 14px;
-    letter-spacing: 8px;
-    padding: 20px 26px;
+    letter-spacing: 6px;
+    padding: 15px 20px;
     border: 2px solid #fff;
-    margin: 50px 0 40px 0;
+    margin: 50px 0 20px 0;
   }
   h2 {
     font-size: 8px;
-    letter-spacing: 4px;
-    margin: 0 0 25px 0;
+    letter-spacing: 3px;
+    margin: 0 0 15px 0;
   }
   h3 {
     font-size: 8px;
-    margin: 20px 0 5px 0;
+    margin: 10px 0 5px 0;
   }
   h4 {
     font-size: 6px;
@@ -212,7 +211,6 @@ Styles - Mobile
   section#work .work a img {
     display: block;
     width: 100%;
-    margin-bottom: 20px;
   }
   section#work p.morework {
     text-align: right;
@@ -234,7 +232,7 @@ Styles - Mobile
 }
 @media only screen and (max-width: 640px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   div#background {
-    background: #f4f4f4 url(../img/bg-xs.jpg) 50% -50px no-repeat;
+    background: #000000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
     background-size: 600px 600px;
   }
   section#connect nav a {
@@ -271,7 +269,7 @@ Styles - Tablet +
 -----------------------------------*/
 @media only screen and (min-width: 641px) {
   div#background {
-    background: #f4f4f4 url(../img/bg-sm.jpg) 50% -300px no-repeat;
+    background: #000000 url(../img/bg-sm.jpg) 50% 0 no-repeat;
   }
   header {
     height: 600px;
@@ -280,10 +278,6 @@ Styles - Tablet +
     right: 40px;
     bottom: 40px;
     font-size: 12px;
-  }
-  section,
-  footer {
-    margin-bottom: 300px;
   }
   section .inner,
   footer .inner {
@@ -294,6 +288,9 @@ Styles - Tablet +
   section:last-child,
   footer:last-child {
     margin-bottom: 0;
+  }
+  div.gap {
+    height: 300px;
   }
   h1 {
     font-size: 36px;
@@ -328,7 +325,6 @@ Styles - Tablet +
   section#work .work a img {
     display: block;
     width: 100%;
-    margin-bottom: 20px;
   }
   section#work p.morework {
     text-align: right;
@@ -353,19 +349,18 @@ Styles - Desktop
 -----------------------------------*/
 @media only screen and (min-width: 900px) {
   div#background {
-    background: #f4f4f4 url(../img/bg-lg.jpg) 50% -300px no-repeat;
+    background: #000000 url(../img/bg-lg.jpg) 50% 0 no-repeat;
   }
   header {
     height: 700px;
-  }
-  section,
-  footer {
-    margin-bottom: 500px;
   }
   section .inner,
   footer .inner {
     width: 800px;
     padding: 150px 0;
+  }
+  div.gap {
+    height: 500px;
   }
   h1 {
     font-size: 48px;
@@ -442,6 +437,9 @@ Styles - Desktop
   }
 }
 @media only screen and (min-width: 1600px) {
+  div#background {
+    background: #000000 url(../img/bg-xl.jpg) 50% 0 no-repeat;
+  }
   header .inner,
   section .inner,
   footer .inner {
