@@ -30,7 +30,8 @@ Styles - All Devices
     position: absolute;
     color: #fff;
     opacity: .8;
-    font-family: 'DINOT-Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 600;
   }
   header .attribution a {
     color: #fff;
@@ -68,26 +69,31 @@ Styles - All Devices
     border: 7px solid #fff;
     letter-spacing: 12px;
     color: #fff;
-    font-family: 'DINOT-Medium', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 600;
   }
   h2 {
     -webkit-font-smoothing: antialiased;
     letter-spacing: 8px;
     color: #fff;
-    font-family: 'DINOT-Medium', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 600;
   }
   h3 {
     color: #222;
-    font-family: 'DINOT-Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
   }
   h4 {
     color: #888;
-    font-family: 'DINOT-Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
   }
   p {
     -webkit-font-smoothing: antialiased;
     color: #222;
-    font-family: 'DINOT-Regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
     text-align: center;
   }
   p.minor {
@@ -150,7 +156,7 @@ Styles - Mobile
 -----------------------------------*/
 @media only screen and (max-width: 640px) {
   div#background {
-    background: #000000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
+    background: #000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
   }
   header {
     height: 300px;
@@ -232,7 +238,7 @@ Styles - Mobile
 }
 @media only screen and (max-width: 640px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   div#background {
-    background: #000000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
+    background: #000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
     background-size: 600px 600px;
   }
   section#connect nav a {
@@ -269,7 +275,7 @@ Styles - Tablet +
 -----------------------------------*/
 @media only screen and (min-width: 641px) {
   div#background {
-    background: #000000 url(../img/bg-sm.jpg) 50% 0 no-repeat;
+    background: #000 url(../img/bg-sm.jpg) 50% 0 no-repeat;
   }
   header {
     height: 600px;
@@ -349,7 +355,7 @@ Styles - Desktop
 -----------------------------------*/
 @media only screen and (min-width: 900px) {
   div#background {
-    background: #000000 url(../img/bg-lg.jpg) 50% 0 no-repeat;
+    background: #000 url(../img/bg-lg.jpg) 50% 0 no-repeat;
   }
   header {
     height: 700px;
@@ -438,7 +444,7 @@ Styles - Desktop
 }
 @media only screen and (min-width: 1600px) {
   div#background {
-    background: #000000 url(../img/bg-xl.jpg) 50% 0 no-repeat;
+    background: #000 url(../img/bg-xl.jpg) 50% 0 no-repeat;
   }
   header .inner,
   section .inner,
@@ -484,82 +490,16 @@ Mixins
 Fonts
 -----------------------------------*/
 @font-face {
-  font-family: 'DINOT-Light';
-  src: url('DINOT-Light.eot');
-  src: url('DINOT-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-Light.woff') format('woff'), /* Modern Browsers */ url('DINOT-Light.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-Light.svg#d4ae15741107290a6421eac27adb2618') format('svg');
-  font-style: normal;
-  font-weight: 200;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-@font-face {
-  font-family: 'DINOT-LightItalic';
-  src: url('DINOT-LightItalic.eot');
-  src: url('DINOT-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-LightItalic.woff') format('woff'), /* Modern Browsers */ url('DINOT-LightItalic.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-LightItalic.svg#5c47b39131bbd371edb89f97f95aede2') format('svg');
-  font-style: italic;
-  font-weight: 200;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-@font-face {
-  font-family: 'DINOT-Regular';
-  src: url('DINOT-Regular.eot');
-  src: url('DINOT-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-Regular.woff') format('woff'), /* Modern Browsers */ url('DINOT-Regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-Regular.svg#0242f4d943b21b265d9ce4b956c6b4bb') format('svg');
+  font-family: 'AlteDIN';
+  src: url('altedin.eot');
+  src: url('altedin.eot?#iefix') format('embedded-opentype'), url('altedin.woff') format('woff'), url('altedin.ttf') format('truetype'), url('altedin.svg#eca9d29b18d79767b181e40ec6ce2bd1') format('svg');
   font-style: normal;
   font-weight: 400;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
 }
 @font-face {
-  font-family: 'DINOT-RegularItalic';
-  src: url('DINOT-RegularItalic.eot');
-  src: url('DINOT-RegularItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-RegularItalic.woff') format('woff'), /* Modern Browsers */ url('DINOT-RegularItalic.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-RegularItalic.svg#d082b13acedc4240f852181a6c0e78bf') format('svg');
-  font-style: italic;
-  font-weight: 400;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-@font-face {
-  font-family: 'DINOT-Medium';
-  src: url('DINOT-Medium.eot');
-  src: url('DINOT-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-Medium.woff') format('woff'), /* Modern Browsers */ url('DINOT-Medium.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-Medium.svg#f31e3791e4803b72861a2e39bc55c4de') format('svg');
+  font-family: 'AlteDIN';
+  src: url('altedinbold.eot');
+  src: url('altedinbold.eot?#iefix') format('embedded-opentype'), url('altedinbold.woff') format('woff'), url('altedinbold.ttf') format('truetype'), url('altedinbold.svg#3ac1ed54ebc523e4b8f6c191c6c4ae55') format('svg');
   font-style: normal;
-  font-weight: 500;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-@font-face {
-  font-family: 'DINOT-MediumItalic';
-  src: url('DINOT-MediumItalic.eot');
-  src: url('DINOT-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-MediumItalic.woff') format('woff'), /* Modern Browsers */ url('DINOT-MediumItalic.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-MediumItalic.svg#f5b34f1086fe3e0acf3d68649563ba5e') format('svg');
-  font-style: italic;
-  font-weight: 500;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-@font-face {
-  font-family: 'DINOT-Bold';
-  src: url('DINOT-Bold.eot');
-  src: url('DINOT-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-Bold.woff') format('woff'), /* Modern Browsers */ url('DINOT-Bold.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-Bold.svg#edac1425ec1429b7472ff8b7ddd47675') format('svg');
-  font-style: normal;
-  font-weight: 700;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
-}
-@font-face {
-  font-family: 'DINOT-BoldItalic';
-  src: url('DINOT-BoldItalic.eot');
-  src: url('DINOT-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('DINOT-BoldItalic.woff') format('woff'), /* Modern Browsers */ url('DINOT-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */ url('DINOT-BoldItalic.svg#63854c30a2fce96edfc2a1a1f05e8cd7') format('svg');
-  font-style: italic;
-  font-weight: 700;
-  
-  /* IE9 Compat Modes */
-  /* Legacy iOS */
+  font-weight: 600;
 }
