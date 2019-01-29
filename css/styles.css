@@ -1,505 +1,145 @@
-/* ----------------------------------
-Styles - All Devices
------------------------------------*/
-@media only screen {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  div#background {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  div#content {
-    position: relative;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-  header {
-    position: relative;
-    text-align: center;
-  }
-  header .attribution {
-    position: absolute;
-    color: #fff;
-    opacity: .8;
-    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 600;
-  }
-  header .attribution a {
-    color: #fff;
-  }
-  section {
-    background: #f4f4f5;
-  }
-  section .inner {
-    zoom: 1;
-  }
-  section .inner:before,
-  section .inner:after {
-    content: "";
-    display: table;
-  }
-  section .inner:after {
-    clear: both;
-  }
-  section#connect {
-    margin-bottom: 0;
-  }
-  footer {
-    background: rgba(0, 0, 0, 0.6);
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    text-transform: uppercase;
-  }
-  h1 {
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    padding: 20px 52px;
-    border: 7px solid #fff;
-    letter-spacing: 12px;
-    color: #fff;
-    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 600;
-  }
-  h2 {
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: 8px;
-    color: #fff;
-    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 600;
-  }
-  h3 {
-    color: #222;
-    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 400;
-  }
-  h4 {
-    color: #888;
-    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 400;
-  }
-  p {
-    -webkit-font-smoothing: antialiased;
-    color: #222;
-    font-family: 'AlteDIN', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-weight: 400;
-    text-align: center;
-  }
-  p.minor {
-    color: #888888;
-  }
-  p a {
-    color: #222;
-  }
-  p:last-child {
-    margin-bottom: 0 !important;
-  }
-  section#connect nav {
-    zoom: 1;
-  }
-  section#connect nav:before,
-  section#connect nav:after {
-    content: "";
-    display: table;
-  }
-  section#connect nav:after {
-    clear: both;
-  }
-  section#connect nav a {
-    float: left;
-    height: 80px;
-  }
-  section#connect nav a#email {
-    background: transparent url(../img/connect-email.png) 50% top no-repeat;
-  }
-  section#connect nav a#skype {
-    background: transparent url(../img/connect-skype.png) 50% top no-repeat;
-  }
-  section#connect nav a#twitter {
-    background: transparent url(../img/connect-twitter.png) 50% top no-repeat;
-  }
-  section#connect nav a#facebook {
-    background: transparent url(../img/connect-facebook.png) 50% top no-repeat;
-  }
-  section#connect nav a#instagram {
-    background: transparent url(../img/connect-instagram.png) 50% top no-repeat;
-  }
-  section#connect nav a#github {
-    background: transparent url(../img/connect-github.png) 50% top no-repeat;
-  }
-  section#connect nav a#dribbble {
-    background: transparent url(../img/connect-dribbble.png) 50% top no-repeat;
-  }
-  section#connect nav a#steam {
-    background: transparent url(../img/connect-steam.png) 50% top no-repeat;
-  }
-  section#connect nav a:hover {
-    background-position: bottom !important;
-  }
-  section#connect nav a:last-child {
-    margin-right: 0;
-  }
+@media screen {
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Rubik, sans-serif;
+		color: #fff;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	h1, h2, h3 {
+		margin: 0;
+		font-weight: normal;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	a {
+		color: #fff;
+	}
+
+	header #badge {
+		background: transparent url(../img/badge.svg) 50% 50% no-repeat;
+		opacity: .4;
+	}
+
+	section#social {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	section#social div {
+		margin-right: 10px;
+		font-size: 36px;
+		opacity: .2;
+	}
+
+	section#social a {
+		display: block;
+		width: 68px;
+		height: 68px;
+		margin-left: 10px;
+		background-color: transparent;
+		background-size: 48px 48px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		transition: opacity .5s;
+	}
+
+	section#social a#twitch {
+		background-image: url(../img/icon-twitch.svg);
+	}
+
+	section#social a#twitter {
+		background-image: url(../img/icon-twitter.svg);
+	}
+
+	section#social a#steam {
+		background-image: url(../img/icon-steam.svg);
+	}
+
+	footer {
+
+	}
+
+	footer #credit {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		font-size: 12px;
+		opacity: .2;
+	}
 }
-/* ----------------------------------
-Styles - Mobile
------------------------------------*/
-@media only screen and (max-width: 640px) {
-  div#background {
-    background: #000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
-  }
-  header {
-    height: 300px;
-  }
-  header .attribution {
-    right: 10px;
-    bottom: 10px;
-    font-size: 6px;
-  }
-  section .inner,
-  footer .inner {
-    width: 300px;
-    margin: 0 auto;
-    padding: 60px 0;
-  }
-  section:last-child,
-  footer:last-child {
-    margin-bottom: 0;
-  }
-  div.gap {
-    height: 100px;
-  }
-  h1 {
-    width: 200px;
-    font-size: 14px;
-    letter-spacing: 6px;
-    padding: 15px 20px;
-    border: 2px solid #fff;
-    margin: 50px 0 20px 0;
-  }
-  h2 {
-    font-size: 8px;
-    letter-spacing: 3px;
-    margin: 0 0 15px 0;
-  }
-  h3 {
-    font-size: 8px;
-    margin: 10px 0 5px 0;
-  }
-  h4 {
-    font-size: 6px;
-    margin: 0;
-  }
-  p {
-    font-size: 14px;
-    margin: 0 0 30px 0;
-  }
-  p.minor {
-    font-size: 8px;
-  }
-  section#work .work {
-    width: 300px;
-    margin-bottom: 80px;
-  }
-  section#work .work a {
-    display: block;
-  }
-  section#work .work a img {
-    display: block;
-    width: 100%;
-  }
-  section#work p.morework {
-    text-align: right;
-  }
-  section#work p.morework a {
-    color: #888;
-  }
-  section#connect nav {
-    margin: 40px 5px 0 5px;
-  }
-  section#connect nav a {
-    width: 16%;
-    margin-right: 12%;
-    margin-bottom: 30px;
-  }
-  section#connect nav a:nth-child(4) {
-    margin-right: 0;
-  }
+
+@media screen and (max-width: 767px) {
+
+	body {
+		background: #141e1e url(../img/background-small.jpg) 50% 0 no-repeat;
+	}
+
+	header {
+		margin-bottom: 100px;
+	}
+
+	header #badge {
+		width: 80px;
+		height: 80px;
+		margin: 50px auto;
+		background-size: auto 100%;
+	}
+
+	header h1 {
+		font-size: 48px;
+		margin-bottom: 20px;
+	}
+
+	header h2 {
+		font-size: 24px;
+	}
+
+	header br {
+		display: none;
+	}
+
+	section#social a {
+		opacity: .6;
+	}
 }
-@media only screen and (max-width: 640px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  div#background {
-    background: #000 url(../img/bg-xs.jpg) 50% 0 no-repeat;
-    background-size: 600px 600px;
-  }
-  section#connect nav a {
-    float: left;
-    height: 40px;
-  }
-  section#connect nav a#email {
-    background-size: 34px 80px;
-  }
-  section#connect nav a#skype {
-    background-size: 29px 80px;
-  }
-  section#connect nav a#twitter {
-    background-size: 35px 80px;
-  }
-  section#connect nav a#facebook {
-    background-size: 30px 80px;
-  }
-  section#connect nav a#instagram {
-    background-size: 30px 80px;
-  }
-  section#connect nav a#github {
-    background-size: 31px 80px;
-  }
-  section#connect nav a#dribbble {
-    background-size: 30px 80px;
-  }
-  section#connect nav a#steam {
-    background-size: 30px 80px;
-  }
-}
-/* ----------------------------------
-Styles - Tablet +
------------------------------------*/
-@media only screen and (min-width: 641px) {
-  div#background {
-    background: #000 url(../img/bg-sm.jpg) 50% 0 no-repeat;
-  }
-  header {
-    height: 600px;
-  }
-  header .attribution {
-    right: 40px;
-    bottom: 40px;
-    font-size: 12px;
-  }
-  section .inner,
-  footer .inner {
-    width: 600px;
-    margin: 0 auto;
-    padding: 100px 0;
-  }
-  section:last-child,
-  footer:last-child {
-    margin-bottom: 0;
-  }
-  div.gap {
-    height: 300px;
-  }
-  h1 {
-    font-size: 36px;
-    margin: 100px 0 40px 0;
-  }
-  h2 {
-    font-size: 20px;
-    margin: 0 0 25px 0;
-  }
-  h3 {
-    font-size: 20px;
-    margin: 20px 0 5px 0;
-  }
-  h4 {
-    font-size: 14px;
-    margin: 0;
-  }
-  p {
-    font-size: 18px;
-    margin: 0 0 64px 0;
-  }
-  p.minor {
-    font-size: 14px;
-  }
-  section#work .work {
-    width: 100%;
-    margin-bottom: 80px;
-  }
-  section#work .work a {
-    display: block;
-  }
-  section#work .work a img {
-    display: block;
-    width: 100%;
-  }
-  section#work p.morework {
-    text-align: right;
-  }
-  section#work p.morework a {
-    color: #888;
-  }
-  section#connect nav {
-    margin: 85px 5px 0 5px;
-  }
-  section#connect nav a {
-    width: 16%;
-    margin-right: 12%;
-    margin-bottom: 60px;
-  }
-  section#connect nav a:nth-child(4) {
-    margin-right: 0;
-  }
-}
-/* ----------------------------------
-Styles - Desktop
------------------------------------*/
-@media only screen and (min-width: 900px) {
-  div#background {
-    background: #000 url(../img/bg-lg.jpg) 50% 0 no-repeat;
-  }
-  header {
-    height: 700px;
-  }
-  section .inner,
-  footer .inner {
-    width: 800px;
-    padding: 150px 0;
-  }
-  div.gap {
-    height: 500px;
-  }
-  h1 {
-    font-size: 48px;
-    margin: 180px 0 40px 0;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 24px;
-  }
-  h4 {
-    font-size: 14px;
-    margin: 0;
-  }
-  p {
-    font-size: 24px;
-  }
-  p.minor {
-    font-size: 14px;
-  }
-  section#work .work {
-    width: 800px;
-    margin-bottom: 120px;
-  }
-  section#work p.morework {
-    text-align: right;
-  }
-  section#work p.morework a {
-    color: #888;
-  }
-  section#connect nav a {
-    width: 10%;
-    margin-right: 20%;
-    margin-bottom: 60px;
-  }
-  section#connect nav a:nth-child(4) {
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  header .inner,
-  section .inner,
-  footer .inner {
-    width: 1100px;
-  }
-  header {
-    height: 800px;
-  }
-  br.smallbreak {
-    display: none;
-  }
-  section#work .work {
-    float: left;
-    width: 500px;
-    margin-bottom: 120px;
-  }
-  section#work .work:nth-child(odd) {
-    /* note this selector includes the all ements inside the container */
-    margin-right: 100px;
-  }
-  section#work p.morework {
-    text-align: right;
-  }
-  section#work p.morework a {
-    color: #888;
-  }
-  section#connect nav a {
-    width: 9%;
-    margin-right: 4%;
-  }
-  section#connect nav a:nth-child(4) {
-    margin-right: 4%;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  div#background {
-    background: #000 url(../img/bg-xl.jpg) 50% 0 no-repeat;
-  }
-  header .inner,
-  section .inner,
-  footer .inner {
-    width: 1200px;
-  }
-  section#work .work:nth-child(odd) {
-    /* note this selector includes the leading paragraph inside the container */
-    margin-right: 200px;
-  }
-}
-/* ----------------------------------
-Mixins
------------------------------------*/
-.psuedoparent {
-  position: relative;
-  z-index: 1;
-}
-.pseudoelement {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.smoothfont {
-  -webkit-font-smoothing: antialiased;
-}
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-/* ----------------------------------
-Fonts
------------------------------------*/
-@font-face {
-  font-family: 'AlteDIN';
-  src: url('altedin.eot');
-  src: url('altedin.eot?#iefix') format('embedded-opentype'), url('altedin.woff') format('woff'), url('altedin.ttf') format('truetype'), url('altedin.svg#eca9d29b18d79767b181e40ec6ce2bd1') format('svg');
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'AlteDIN';
-  src: url('altedinbold.eot');
-  src: url('altedinbold.eot?#iefix') format('embedded-opentype'), url('altedinbold.woff') format('woff'), url('altedinbold.ttf') format('truetype'), url('altedinbold.svg#3ac1ed54ebc523e4b8f6c191c6c4ae55') format('svg');
-  font-style: normal;
-  font-weight: 600;
+
+@media screen and (min-width: 768px) {
+
+	body {
+		background: #141e1e url(../img/background-large.jpg) 50% 0 no-repeat;
+		background-size: 100% auto;
+	}
+
+	header {
+		margin-bottom: 200px;
+	}
+
+	header #badge {
+		width: 140px;
+		height: 140px;
+		margin: 150px auto;
+		background-size: 100% 100%;
+	}
+
+	header h1 {
+		font-size: 96px;
+		margin-bottom: 10px;
+	}
+
+	header h2 {
+		font-size: 36px;
+	}
+
+	section#social a {
+		opacity: .2;
+	}
+
+	section#social a:hover {
+		opacity: .6;
+	}
 }
